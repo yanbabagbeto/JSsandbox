@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+:root {
+  --mainFont: "Roboto", sans-serif;
+  --fontWeightHeavy: 800;
+  --fontWeightLight: 300;
+  --primary: rgb(27, 27, 27);
+  --variant: hsla(0, 0%, 30%, 0.5);
+  --fontColor: #fff;
+  --accent: #202020;
+}
+
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.calculatorFrame {
+  width: 70vw;
+  max-width: 450px;
+  height: 80vh;
+  max-height: 800px;
+  display: grid;
+  grid-template-rows: 35% 1fr;
+  background-color: var(--primary);
+  border-radius: 5px;
+}
+
+/* Styling the upper body of the calculator*/
+
+.screen {
+  padding: 0.5rem;
+  background-color: var(--primary);
+  border-radius: 5px;
+  color: var(--fontColor);
+}
+.screenDisplay {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 30px 35% 1fr;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--mainFont);
+  font-weight: var(--fontWeightHeavy);
+}
+
+.bigTextInput {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: clamp(4vw, 4.2vw, 4.5vw);
+  text-size-adjust: auto;
+  font-weight: var(--fontWeightHeavy);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 1px #6b6b6b;
+  margin: 10px 0;
+}
+.smallTextResult {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: clamp(2vw, 2.5vw, 3vw);
+  font-weight: var(--fontWeightLight);
+  text-size-adjust: auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--variant);
+  border-radius: 5px;
+}
+
+/* Styling the lower body of the calculator*/
+.btnDigits {
+  padding: 0.5rem;
+  min-height: 100%;
+  width: 100%;
+
+  color: var(--fontColor);
+  border-radius: 5px;
+}
+.btnDigitsFrame {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  /* border: 1px solid green; */
+  grid-gap: 15px;
+  padding: 1rem;
+  box-shadow: 0 0 3px 1px #6b6b6b;
+}
+
+.digit {
+  width: auto;
+  height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  font-size: 2rem;
+  font-weight: var(--fontWeightHeavy);
+  cursor: pointer;
+}
+
+.equals {
+  /* border: 1px solid blue; */
+  background-color: tomato;
+  /* grid-column: 4 / 5;
+  grid-row: 4 / span 2; */
+}
+
+.divide,
+.times,
+.minus,
+.plus {
+  background-color: var(--fontColor);
+  color: var(--accent);
+}

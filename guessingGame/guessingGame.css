@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  /* outline: 1px solid red; */
+}
+
+:root {
+  --bkg-color: rgb(3, 24, 31);
+  --outline: rgb(18, 178, 231);
+  --body-bkg: rgb(0, 0, 0);
+  --txt: #cbcccc;
+  --mainText: #fff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-bkg);
+}
+
+.main-container {
+  border: 5px solid var(--outline);
+  /* padding: 2rem; */
+  border-radius: 2rem+50px;
+}
+.container {
+  width: 70vw;
+  height: 70vh;
+  border: 5px solid var(--mainText);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 4rem;
+  border-radius: 30px;
+}
+
+.container > * {
+  max-width: 90%;
+}
+
+.previousGuesses,
+.inputSection,
+h1 {
+  width: 100%;
+}
+
+h1,
+.previousGuesses {
+  color: var(--txt);
+}
+
+label,
+.instruction {
+  color: var(--mainText);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.inputField {
+  width: auto;
+  border: 1px solid red;
+  flex: 2 5 auto;
+  font-size: 1rem;
+  outline: 0;
+}
+
+.feedback {
+  width: 100%;
+  font-size: 1.5rem;
+  outline: 0;
+  border: 0;
+  font-weight: 100;
+  padding: 1rem;
+  color: white;
+}
+.submitButton {
+  padding: 0.2rem 0.8rem;
+}
+
+.resetButton {
+  padding: 1rem 2rem;
+  font-weight: 700;
+}
+
+.btn {
+  font-family: "Lato", sans-serif;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+.winner {
+  background-color: green;
+  color: white;
+}
+
+.error {
+  color: tomato;
+}
+.invisible {
+  opacity: 0;
+}
+.disabled {
+  pointer-events: none;
+}
+
+@media screen and (max-width: 800px) {
+  .inputSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    row-gap: 15px;
+  }
+
+  .inputSection .submitButton,
+  .inputSection .inputField {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .main-container .container .resetButton {
+    margin-bottom: 4rem;
+  }
+}

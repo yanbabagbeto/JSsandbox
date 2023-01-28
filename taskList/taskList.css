@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  outline: 1px solid red;
+}
+
+:root {
+  /*
+    --bg-color:;
+    --headings-color:;
+    --underlined-color:;
+    --selected-color:;
+    --link-color:;
+    --p-font:;
+    --h-font:;
+
+    */
+}
+
+/* General styles*/
+
+body {
+  /**/
+  min-height: 100vh;
+}

@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --body-font: "Ubuntu", sans-serif;
+}
+body {
+  font-family: var(--body-font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  max-height: 100vh;
+}
+
+label {
+  font-size: 2rem;
+  font-weight: 600;
+}
+input,
+label,
+p {
+  display: block;
+  /* border: 1px solid red; */
+  line-height: 2rem;
+  font-family: var(--body-font);
+  border: 0;
+}
+
+#main_input {
+  width: 100%;
+  align-self: center;
+  justify-self: stretch;
+  box-shadow: 0 0 1rem 1px #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.btn {
+  margin: 1rem;
+  width: 200px;
+  border-radius: 1rem;
+  cursor: pointer;
+  justify-self: center;
+  transition: opacity 0.2s ease;
+  font-family: var(--body-font);
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 0.6rem;
+  color: #fff;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+.convert {
+  background-color: dodgerblue;
+}
+.reset {
+  background-color: tomato;
+}
+
+p {
+  height: 40px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 100px 100px repeat(2, 1fr) 200px;
+}
+
+.item {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid green; */
+}
+
+.hexOutput {
+  font-size: 4rem;
+}
